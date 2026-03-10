@@ -3,27 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Profile</h1>
-    <img
-      class="fit-picture"
-      src="/assets/images/logo-app.jpg"
-      alt="App Logo"
-      id="profile-photo"
-    />
-    <input
-      type="file"
-      id="profile-photo-input"
-      name="profilePhoto"
-      accept="image/*"
-      style="display: none"
-    />
-    <button id="set-profile-photo">+</button>
-    <h2 id="logged-username"></h2>
-    <small>All Set?</small>
-    <button id="all-set">All Set!</button>
+    <main class="welcome-main">
+      <div class="welcome-container">
+        <h2>You're almost there!</h2>
+        <p>Add a profile photo - or skip for now</p>
+        <div class="photo-wrapper">
+          <img
+            class="fit-picture"
+            src="/assets/images/logo-app.jpg"
+            alt="App Logo"
+            id="profile-photo"
+          /><button id="set-profile-photo">+</button>
+        </div>
+        <input
+          type="file"
+          id="profile-photo-input"
+          name="profilePhoto"
+          accept="image/*"
+          style="display: none"
+        />
+        <h3 id="logged-username">@user</h3>
+        <button id="allset-button">All Set! 🐝</button>
+        <small>You can always go edit it in your profile</small>
+      </div>
+    </main>
     <script src="/utils/storage.js"></script>
     <script src="/auth/welcome.js"></script>
   </body>
