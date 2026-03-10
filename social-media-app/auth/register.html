@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="register-login">
+        <button class="active-page">Register</button>
+        <a href="login.html"> <button class="inactive-page">Login</button></a>
+      </div>
+      <div class="registration-form">
+        <form class="registration-form" id="registration-form">
+          <fieldset>
+            <div class="register-text-logo">
+              <img
+                class="fit-picture"
+                src="/assets/images/bee-logo.png"
+                alt="App Logo"
+              />
+              <h1>Social Hive</h1>
+              <small>Join the conversation</small>
+            </div>
+            <label for="username">Username* </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              aria-required="true"
+              required
+            />
+            <span id="username-error"></span>
+            <label for="email">Email* </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="someone@else.com"
+              aria-required="true"
+              required
+            />
+            <span id="email-error"></span>
+            <label for="password">Password* </label>
+            <div class="password-with-requirements">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                aria-required="true"
+                required
+              />
+              <span id="password-error"></span>
+              <ul>
+                <li>atleast 8 characters long</li>
+                <li>1 uppercase letter</li>
+                <li>1 lowercase letter</li>
+                <li>1 special character</li>
+              </ul>
+            </div>
+            <label for="password-confirm">Confirm Password* </label>
+            <input
+              type="password"
+              id="password-confirm"
+              name="passwordConfirm"
+              aria-required="true"
+              required
+            />
+            <span id="password-confirm-error"></span>
+            <label for="birth-date">Date of birth* </label>
+            <input
+              type="date"
+              id="birth-date"
+              name="birthDate"
+              aria-required="true"
+              required
+            />
+            <span id="birth-date-error"></span>
+            <div class="register-buttons-question">
+              <button type="submit" class="create-button">
+                Create Account
+              </button>
+              <button type="reset" class="cancel-button">Cancel</button>
+              <p>
+                Have an account?
+                <a href="login.html">Login</a>
+              </p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <script src="/utils/storage.js"></script>
+    <script src="/auth/auth.js"></script>
+  </body>
+</html>

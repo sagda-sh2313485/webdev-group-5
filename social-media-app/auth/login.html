@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div class="register-login">
+        <a href="register.html">
+          <button class="inactive-page">Register</button></a
+        >
+        <button class="active-page">Login</button>
+      </div>
+      <div class="login-form">
+        <form class="login-form" id="login-form">
+          <fieldset>
+            <div class="login-text-logo">
+              <img
+                class="fit-picture"
+                src="/assets/images/bee-logo.png"
+                alt="App Logo"
+              />
+              <h1>Social Hive</h1>
+              <small>Welcome back</small>
+            </div>
+            <label for="username">Username* </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              aria-required="true"
+              required
+            />
+            <label for="password">Password* </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              aria-required="true"
+              required
+            />
+            <span id="authentication-error"></span>
+            <div class="login-button-question">
+              <button type="button" id="login-button">Login</button>
+              <p>
+                Don't have an account?
+                <a href="register.html">Register</a>
+              </p>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <script src="/utils/storage.js"></script>
+    <script src="/auth/login.js"></script>
+  </body>
+</html>
