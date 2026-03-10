@@ -19,12 +19,19 @@
 
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: var(--bg-primary);
     background-image: radial-gradient(ellipse at 20% 50%, rgba(59, 130, 246, 0.07) 0%, transparent 60%),
                       radial-gradient(ellipse at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
     min-height: 100vh;
     font-size: 14px;
+    padding: 0.75rem;
 }
 
 main {
@@ -246,4 +253,42 @@ span[id$="-error"] {
     border-radius: 50%;
     border: 1px solid black;
     background-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 1rem 4rem 0rem 4rem;
+    }
+
+    .welcome-main {
+        margin: 6rem auto;
+        padding: 1rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-color: var(--bg-surface);
+    }
+    main {
+        margin: 0;
+        padding: 0rem 0.25rem 0rem 0.25rem;
+    }
+    
+    .welcome-main {
+        margin: 6rem auto;
+        padding: 4rem 1rem;
+    }
+
+    .register-login {
+        background-color: var(--bg-surface);
+        padding: 0.75rem;
+        width: 100%;
+    }
+
+    #registration-form > fieldset, #login-form > fieldset {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
 }
