@@ -3,11 +3,153 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Feed</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
-    <main><button type="button" id="logout-button">Logout</button></main>
-    <script src="/utils/storage.js"></script>
-    <script src="/feed/feed.js"></script>
+    <main class="feed-main">  
+        <h1>Feed</h1>
+      <!--Whats on your mind? section-->
+      <section class="whats-on-your-mind">
+          <div class="create-post" id ='create-post'>
+            <!--top row-->
+              <div class="top-row">
+                <img src="../assets/images/default.jpg" alt="profile" class="avatar" id = 'pfp'>
+                <textarea class="mind-input" id="mind-input" placeholder="What's on your mind?"></textarea>
+              </div>
+              <img id="post-preview" class="post-image" style="display: none;">
+              <!--bottom row-->
+              <div class="bottom-row">
+                <div class="image-icon">
+                  <input type="file" id="imageUpload" accept="image/*" hidden> <!--so when the user clicks on the icon it loaads-->
+                  <i class="fa-regular fa-image" id ='image-icon'></i>
+                  
+                </div>
+                <button class="post-btn" id ='post-btn'>Post</button>
+              </div>
+          </div>
+      </section>
+      <!--post cards-->  <!--Feed of posts-->
+      <section class="posts-feed" id = 'posts-feed'>
+        <!--first post card-->
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-user-info">
+            <img src="../assets/images/default.jpg" alt="profile" class="post-avatar">
+
+            <div class="post-meta">
+              <h3 class="post-name">Sarah Chen</h3>
+              <p class="post-time">about 4 hours ago</p>
+            </div>
+          </div>
+
+          <button class="delete-btn">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+
+        <div class="post-body">
+          <p>
+            Just launched my new project after months of work! Sometimes the best
+            things take time. What are you all working on this week? 🚀
+          </p>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="action-btn">
+            <i class="fa-regular fa-comment"></i>
+          </button>
+        </div>
+      </article>
+      <!--2nd post card-->
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-user-info">
+            <img src="../assets/images/logo-app.jpg" alt="profile" class="post-avatar">
+
+            <div class="post-meta">
+              <h3 class="post-name">Marco Rivera</h3>
+              <p class="post-time">about 4 hours ago</p>
+            </div>
+          </div>
+
+          <button class="delete-btn">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+        <div class="post-body">
+          <p>
+            Been working on improving my coding skills every day. It’s slow, but I can
+            actually feel the progress now.
+          </p>
+        </div>
+        <div class="post-actions">
+          <button class="action-btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+          <button class="action-btn">
+            <i class="fa-regular fa-comment"></i>
+          </button>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="post-header">
+          <div class="post-user-info">
+            <img src="../assets/images/default.jpg" alt="profile" class="post-avatar">
+
+            <div class="post-meta">
+              <h3 class="post-name">Lina Ahmed</h3>
+              <p class="post-time">1 hour ago</p>
+            </div>
+          </div>
+
+          <button class="delete-btn">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+
+        <div class="post-body">
+          <p>
+            Finally finished my assignment after fighting with bugs for hours. Why do
+            they only show up at the worst time 😭
+          </p>
+        </div>
+
+        <div class="post-actions">
+          <button class="action-btn">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+
+          <button class="action-btn">
+            <i class="fa-regular fa-comment"></i>
+          </button>
+        </div>
+      </article>
+    </section>
+     <!-- bottom navigation -->
+     <nav class="bottom-nav">
+        <a href="feed.html" class="nav-item active">
+          <i class="fa-solid fa-house"></i>
+          <span>Feed</span>
+        </a>
+
+        <a href="explore.html" class="nav-item">
+          <i class="fa-regular fa-compass"></i>
+          <span>Explore</span>
+        </a>
+
+        <a href="../profile/profile.html" class="nav-item">
+          <i class="fa-regular fa-user"></i>
+          <span>Profile</span>
+        </a>
+    </nav>
+    <script src="../utils/storage.js"></script>
+    <script src="../utils/feedUtils.js"></script>
+    <script src="../feed/feed.js"></script>
+    <script src="../post/post.js"></script>
+    </main>
   </body>
 </html>

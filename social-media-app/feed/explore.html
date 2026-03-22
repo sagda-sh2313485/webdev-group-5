@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <main class="explore-page">
+        <section class="explore-header">
+            <h1>Explore</h1>
+            <p>Discover people to follow</p>
+        </section>
+
+        <section class="explore-search">
+            <input type="text" placeholder="Search people..." id = 'searchInput'>
+        </section>
+
+        <section class="users-list" id = "users-list">
+
+            <!--first user card-->
+            <article class="user-card">
+                <div class="user-card-left">
+                    <img src="../assets/images/default.jpg" alt="Alex Rivera" class="user-avatar">
+
+                    <div class="user-info">
+                        <h3 class="user-name">Alex Rivera</h3>
+                        <p class="user-bio">Full-stack developer building the future one commit at a time.</p>
+                    </div>
+                </div>
+
+                <button class="follow-btn follow" id="follow-btn">Follow</button>
+            </article>
+            <!--second user card-->
+            <article class="user-card">
+                <div class="user-card-left">
+                    <img src="../assets/images/default.jpg" alt="Maya Johnson" class="user-avatar">
+
+                    <div class="user-info">
+                        <h3 class="user-name">Maya Johnson</h3>
+                        <p class="user-bio">Photographer capturing moments that tell stories.</p>
+                    </div>
+                </div>
+
+                <button class="follow-btn following">Following</button>
+            </article>
+
+        </section>
+    </main>
+
+
+    <!-- bottom navigation -->
+     <nav class="bottom-nav">
+        <a href="feed.html" class="nav-item ">
+          <i class="fa-solid fa-house"></i>
+          <span>Feed</span>
+        </a>
+
+        <a href="explore.html" class="nav-item active">
+          <i class="fa-regular fa-compass"></i>
+          <span>Explore</span>
+        </a>
+
+        <a href="../profile/profile.html" class="nav-item">
+          <i class="fa-regular fa-user"></i>
+          <span>Profile</span>
+        </a>
+    </nav>
+    <script src="../utils/storage.js"></script>
+    <script src="../utils/feedUtils.js"></script>
+    <script src="../feed/followSystem.js"></script>
+    <script src="../feed/explore.js"></script>
+</body>
+</html>

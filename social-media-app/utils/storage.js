@@ -2,7 +2,7 @@ const startup_data =  {
     users: [],
     posts: [],
     comments: [],
-    currentUserId: null
+    currentUserId: 'u1'
 };
 
 function getData() {

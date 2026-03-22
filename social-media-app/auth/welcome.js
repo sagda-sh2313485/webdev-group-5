@@ -5,7 +5,7 @@ const profilePhoto = document.getElementById("profile-photo");
 const usernameElement = document.getElementById("logged-username");
 usernameElement.textContent = getCurrentUser().username;
 
-const allSetButton = document.getElementById("all-set");
+const allSetButton = document.getElementById("allset-button");
 allSetButton.addEventListener(("click"), () => {
     window.location.href = "../feed/feed.html";
 })
