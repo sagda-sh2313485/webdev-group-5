@@ -100,10 +100,19 @@ function deletePost(postId) {
 // these can stay here unused for now
 const postId = localStorage.getItem("selectedPostId");
 
-function toggleLike(postId, userId) {
+function toggleLike2(postId, userId) {
+    const data = getData();
+    const post = data.posts.find(p => p.id === postId);
+    if (!post) return;
 
+    if (post.likes.includes(userId)) {
+        post.likes = post.likes.filter(id => id !== userId);
+    } else {
+        post.likes.push(userId);
+    }
+
+    saveData(data);
 }
-
 function addComment(postId, userId, content) {
 
 }
