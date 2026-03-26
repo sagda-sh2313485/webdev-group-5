@@ -38,6 +38,7 @@
                         Logout
                     </button>
                 </div>
+                
           </div>
 
           <p id="profile-bio" class="profile-bio">No bio yet.</p>
@@ -131,6 +132,34 @@
         </form>
       </div>
     </div>
+
+      <div id="edit-profile-modal" class="modal-overlay hidden">
+      ...
+    </div>
+
+    
+    <div id="logout-modal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Log out</h3>
+          <button id="close-logout-modal-btn" class="icon-btn" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <p class="logout-message">Are you sure you want to log out?</p>
+
+        <div class="modal-actions">
+          <button type="button" id="cancel-logout-btn" class="cancel-btn">
+            Cancel
+          </button>
+          <button type="button" id="confirm-logout-btn" class="logout-btn">
+            Logout
+          </button>
+        </div>
+      </div>
+    </div>
+
 
     <script src="../utils/storage.js"></script>
     <script src="../profile/profile.js"></script>

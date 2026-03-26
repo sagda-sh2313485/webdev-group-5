@@ -234,7 +234,29 @@ function attachEditSubmitEvent() {
 }
 
 // ---------- logout ----------
-logoutButton.addEventListener("click", logout);
+const logoutModal = document.getElementById("logout-modal");
+const confirmLogoutButton = document.getElementById("confirm-logout-btn");
+const cancelLogoutButton = document.getElementById("cancel-logout-btn");
+const closeLogoutModalButton = document.getElementById("close-logout-modal-btn");
+
+// ---------- logout modal ----------
+function openLogoutModal() {
+  logoutModal.classList.remove("hidden");
+}
+
+function closeLogoutModal() {
+  logoutModal.classList.add("hidden");
+}
+
+function attachLogoutEvents() {
+  logoutButton.addEventListener("click", openLogoutModal);
+  cancelLogoutButton.addEventListener("click", closeLogoutModal);
+  closeLogoutModalButton.addEventListener("click", closeLogoutModal);
+  confirmLogoutButton.addEventListener("click", () => {
+    logout();
+  });
+}
+
 
 // ---------- init ----------
 renderProfileHeader();
@@ -243,3 +265,4 @@ attachDeleteEvents();
 attachModalEvents();
 attachImagePreviewEvent();
 attachEditSubmitEvent();
+attachLogoutEvents();
