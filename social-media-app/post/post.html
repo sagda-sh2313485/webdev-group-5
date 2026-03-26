@@ -3,11 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>post</title>
+    <title>Post Details</title>
+    <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    
+    <main class="post-page-main">
+
+        <section class="post-page-header">
+            <a href="../feed/feed.html" class="back-link">
+                <i class="fa-solid fa-arrow-left"></i>
+            Back to feed 
+            </a>
+            <h1>Post Details</h1>
+        </section>
+
+        <!-- Here, we will render and show the selected post the user clicks on -->
+        <section class="single-post-section" id="post-container">
+            <article class="post-card">
+                <div class="post-header">
+                    <div class="post-user-info">
+                        <img src="../assets/images/default.jpg" alt="profile" class="post-avatar">
+                        <div class="post-meta">
+                            <h3 class="post-name">Sarah Chen</h3>
+                            <p class="post-time">2 hours ago</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="post-body">
+                 <p class="post-text">
+                    Just trying out the new app! 
+                 </p>   
+
+                </div>
+
+                <div class="post-actions">
+                    <button class="action-btn like-btn" id="like-btn">
+                    <i class="fa-regular fa-heart"></i>   
+                    <span class="like-count">12</span>
+                    </button>
+
+                    <button class="action-btn comment-btn">
+                        <i class="fa-regular fa-comment"></i>
+                        <span class="comment-count">3</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <!-- This section will be for creating and posting comments -->
+        <section class="add-comment-section">
+            <h2>Add a Comment</h2>
+            <div class="add-comment-box">
+                <input type="text" id="comment-input" class="comment-input" placeholder="Write a comment...">
+                <button id="comment-btn" class="post-btn">Post Comment</button>
+            </div>
+
+        </section>
+
+        <section class="comments-section">
+            <h2>Comments</h2>
+
+            <div id="comments-container" class="comments-container">
+                <article class="comment-card">
+                    <div class="comment-header">
+                        <img src="../assets/images/default.jpg" alt="profile" class="comment-avatar">
+                        <div class="comment-meta">
+                            <h3 class="comment-name">Marco Rivera</h3>
+                            <p class="comment-time">20 minutes ago</p>
+
+                        </div>
+                    </div>
+                    <p class="comment-text">Love this, the app really is great!</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
 
 
@@ -16,8 +90,7 @@
     
     <script src="../utils/storage.js"></script>
     <script src="../utils/feedUtils.js"></script>
-    <script src="../feed/feed.js"></script>
-    <script src="../post/post.js"></script>
+    <script src="../post/postDetails.js"></script>
 </body>
 </html>
                         <!-- THIS page is for one post so You need to get the post Id -->

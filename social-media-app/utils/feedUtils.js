@@ -21,7 +21,7 @@ function toPostHtml(p, username, profilePic) {
         : '';
 
     return `
-    <article class="post-card" data-id="${p.id}">
+    <article class="post-card" id="post-${p.id}" data-id="${p.id}">
         <div class="post-header">
           <div class="post-user-info">
             <img src="${imgSrc}" alt="profile" class="post-avatar">
@@ -41,7 +41,7 @@ function toPostHtml(p, username, profilePic) {
         </div>
 
         <div class="post-actions">
-          <button class="action-btn like-btn ${isLiked ? 'liked' : ''} id="like-${p.id}"}"">
+          <button class="action-btn like-btn ${isLiked ? 'liked' : ''}" id="like-${p.id}">
             <i class="fa-${isLiked ? 'solid' : 'regular'} fa-heart"></i>
             <span class="like-count">${likeCount}</span>
           </button>
