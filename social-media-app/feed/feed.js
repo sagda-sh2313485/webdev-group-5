@@ -73,8 +73,8 @@ function attachPostCardEvents() {
 }
 
 function refreshFeed() {
-    //renderPosts() un comment after eveythign good 
-    //attachLikeEvents();
-    //attachCommentEvents();
-    //attachPostCardEvents();
+    // renderPosts()
+    // attachLikeEvents();
+    // attachCommentEvents();
+    // attachPostCardEvents();
 }

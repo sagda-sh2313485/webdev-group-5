@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="profile-page">
+      <section class="profile-hero card">
+        <div class="profile-hero-left">
+          <img
+            id="profile-avatar"
+            class="profile-avatar-large"
+            src="../assets/images/default.jpg"
+            alt="Profile picture"
+          />
+        </div>
+
+        <div class="profile-hero-right">
+            <div class="profile-title-row">
+                <div>
+                    <h1 id="profile-username">@username</h1>
+                </div>
+
+                <div class="profile-header-actions">
+                    <button id="edit-profile-btn" class="edit-btn">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                        Edit Profile
+                    </button>
+                    <button id="logout-btn" class="logout-btn">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Logout
+                    </button>
+                </div>
+          </div>
+
+          <p id="profile-bio" class="profile-bio">No bio yet.</p>
+
+          <div class="profile-stats">
+            <div class="stat-box">
+              <span id="posts-count">0</span>
+              <small>Posts</small>
+            </div>
+            <div class="stat-box">
+              <span id="followers-count">0</span>
+              <small>Followers</small>
+            </div>
+            <div class="stat-box">
+              <span id="following-count">0</span>
+              <small>Following</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-posts-section card">
+        <div class="section-header">
+          <div>
+            <h2>Posts</h2>
+            <p>Your posts appear here</p>
+          </div>
+        </div>
+
+        <div id="profile-posts" class="profile-posts-list">
+          <!-- posts rendered here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- bottom navigation -->
+    <nav class="bottom-nav">
+      <a href="../feed/feed.html" class="nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Feed</span>
+      </a>
+
+      <a href="../feed/explore.html" class="nav-item">
+        <i class="fa-regular fa-compass"></i>
+        <span>Explore</span>
+      </a>
+
+      <a href="../profile/profile.html" class="nav-item active">
+        <i class="fa-regular fa-user"></i>
+        <span>Profile</span>
+      </a>
+    </nav>
+
+    <!-- edit profile modal -->
+    <div id="edit-profile-modal" class="modal-overlay hidden">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3>Edit Profile</h3>
+          <button id="close-modal-btn" class="icon-btn" aria-label="Close">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <form id="edit-profile-form" class="edit-profile-form">
+          <label for="edit-bio">Bio</label>
+          <textarea
+            id="edit-bio"
+            rows="4"
+            maxlength="160"
+            placeholder="Tell people a little about yourself..."
+          ></textarea>
+
+          <label for="edit-profile-image">Profile Picture</label>
+          <input id="edit-profile-image" type="file" accept="image/*" />
+
+          <div class="modal-preview-wrap">
+            <img
+              id="edit-preview-image"
+              src="../assets/images/default.jpg"
+              alt="Preview"
+              class="edit-preview-image"
+            />
+          </div>
+
+          <div class="modal-actions">
+            <button type="button" id="cancel-edit-btn" class="cancel-btn">
+              Cancel
+            </button>
+            <button type="submit" class="submit-btn">Save Changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../utils/storage.js"></script>
+    <script src="../profile/profile.js"></script>
+  </body>
+</html>
