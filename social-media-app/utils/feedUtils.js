@@ -12,14 +12,6 @@ function toPostHtml(p, username, profilePic) {
     const imgSrc = fixPfp(profilePic);
     const timeP = formatTimeAgo(p.timestamp);
 
-    const deleteButtonHtml = p.authorId === currentUser.id
-        ? `
-            <button class="delete-btn">
-                <i class="fa-regular fa-trash-can"></i>
-            </button>
-          `
-        : '';
-
     return `
     <article class="post-card" id="post-${p.id}" data-id="${p.id}">
         <div class="post-header">
@@ -31,8 +23,6 @@ function toPostHtml(p, username, profilePic) {
               <p class="post-time">${timeP}</p>
             </div>
           </div>
-
-          ${deleteButtonHtml}
         </div>
 
         <div class="post-body">
