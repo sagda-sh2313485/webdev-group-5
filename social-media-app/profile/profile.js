@@ -154,16 +154,38 @@ function deleteOwnPost(postId) {
   attachDeleteEvents();
 }
 
-function attachDeleteEvents() {
-  const deleteButtons = document.querySelectorAll(".delete-own-post-btn");
+// ---------- delete modal ----------
+const deleteModal = document.getElementById("delete-modal");
+const confirmDeleteButton = document.getElementById("confirm-delete-btn");
+const cancelDeleteButton = document.getElementById("cancel-delete-btn");
+let postToDelete = null;
 
+function openDeleteModal() {
+  deleteModal.classList.remove("hidden");
+}
+function closeDeleteModal() {
+  deleteModal.classList.add("hidden");
+}
+function attachDeleteEvents() {
+  confirmDeleteButton.addEventListener("click", () => { 
+    if(postToDelete) {
+      deleteOwnPost(postToDelete);
+      postToDelete = null;
+    }
+    closeDeleteModal(); });
+  cancelDeleteButton.addEventListener("click", () => { 
+    postToDelete = null;
+    closeDeleteModal(); })
+  const deleteButtons = document.querySelectorAll(".delete-own-post-btn");
   deleteButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
-      const postId = btn.dataset.postId;
-      deleteOwnPost(postId);
+      postToDelete = btn.dataset.postId;
+      openDeleteModal();
     });
   });
 }
+
+
 
 // ---------- modal logic ----------
 const modal = document.getElementById("edit-profile-modal");

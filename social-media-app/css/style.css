@@ -933,6 +933,7 @@ span[id$="-error"] {
 .edit-btn,
 .logout-btn,
 .cancel-btn,
+.delete-btn,
 .submit-btn {
     border-radius: 12px;
     padding: 0.5rem 0.75rem;
@@ -954,12 +955,12 @@ span[id$="-error"] {
     background: var(--accent-hover);
 }
 
-.logout-btn, .cancel-btn {
+.logout-btn, .cancel-btn, .delete-btn {
     background: var(--bg-input);
     color: var(--text-primary);
 }
 
-.logout-btn:hover, .cancel-btn:hover {
+.logout-btn:hover, .cancel-btn:hover, .delete-btn:hover {
     border-color: #4b5563;
 }
 
@@ -1308,7 +1309,7 @@ span[id$="-error"] {
   border-radius: 16px;
 }
 
-.logout-message {
+.logout-message, .delete-message {
   margin: 16px 0 24px;
   font-size: 16px;
   line-height: 1.5;
